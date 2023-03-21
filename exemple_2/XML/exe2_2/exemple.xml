@@ -1,13 +1,75 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<library>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><library>
+                
+    
+    
     <book>
+                                
+        
+        
         <title>Война и мир</title>
+                                
+        
+        
         <author>Лев толсой</author>
+                                
+        
+        
         <year>1869</year>
+                            
+    
+    
     </book>
+                
+    
+    
     <book>
+                                
+        
+        
         <title>Мастер и маргарита</title>
+                                
+        
+        
         <author>Михаил Булгаков</author>
+                                
+        
+        
         <year>1967</year>
+                            
+    
+    
+    </book>
+            
+    
+    
+    <book>
+                        
+        
+        <title>dsdsd</title>
+                        
+        
+        <author>sdsdsdsdsdsd</author>
+                        
+        
+        <year>124</year>
+                    
+    
+    </book>
+        
+    
+    <book>
+                
+        <title>dfdfdf</title>
+                
+        <author>dfdfdfdfdf</author>
+                
+        <year>21212</year>
+            
+    </book>
+    
+    <book>
+        <title>wdwdwdwdwdwd</title>
+        <author/>
+        <year>dwdwdw\</year>
     </book>
 </library>
