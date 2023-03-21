@@ -1,8 +1,9 @@
 package JSON;
 
-import java.io.FileWriter;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+
+import java.io.FileWriter;
 
 public class task_2 {
     public static void main(String[] args) {
@@ -12,12 +13,12 @@ public class task_2 {
         JSONObject book1 = new JSONObject();
         book1.put("title", "Война и мир");
         book1.put("author", "Лев Толстой");
-        book1.put("year", 1869);
+        book1.put("year", "1869");
 
         JSONObject book2 = new JSONObject();
         book2.put("title", "Мастер и Маргарита");
         book2.put("author", "Михаил Булшаков");
-        book2.put("year", 1967);
+        book2.put("year", "1967");
 
         books.add(book1);
         books.add(book2);

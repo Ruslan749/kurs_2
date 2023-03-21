@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class addBooksJson {
     static Scanner in = new Scanner(System.in);
-    public static void main (String[] args) {
+    public static void addbook () {
         try {
             JSONParser parser = new JSONParser();
             Object obj = parser.parse(new FileReader("JSON/json2_3/exemple.json"));

@@ -13,13 +13,17 @@ public class Main {
                 4. Удалить книгу\s
                 """);
         System.out.print(">>>  ");
+
         byte option = Byte.parseByte(in.nextLine()) ;
+        if (option < 1 || option > 4){
+            System.out.println("Вне допустимых значениях данные");
+        }
 
         switch (option) {
             case 1 -> showJson.show();
-            case 2 -> System.out.println("вариант 2");
-            case 3 -> System.out.println("вариант 3");
-            case 4 -> System.out.println("вариант 4");
+            case 2 -> filterJson.filter();
+            case 3 -> addBooksJson.addbook();
+            case 4 -> removeBook.remuve();
         }
 
     }

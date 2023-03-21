@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class filterJson {
 
-    public static void main(String[] args) {
+    public static void filter (){
         try {
             Scanner in = new Scanner(System.in);
             JSONParser parser = new JSONParser();
@@ -22,12 +22,12 @@ public class filterJson {
 
             for (Object o : jsonArray){
                 JSONObject book = (JSONObject) o;
-                if(((JSONObject) o).get("year").equals(find)||((JSONObject) o).get("title").equals(find)||((JSONObject) o).get("autor").equals(find)) {
+                if(book.get("year").toString().equals(find) || book.get("title").toString().equals(find)|| book.get("author").toString().equals(find)) {
                     System.out.println("\nCourent Element: book");
                     System.out.println("Book name: " + book.get("title"));
-                    System.out.println("Autor: " + book.get("autor"));
+                    System.out.println("Author: " + book.get("author"));
                     System.out.println("Year: " + book.get("year"));
-                };
+                }
             }
         }catch (Exception e){
             e.printStackTrace();
