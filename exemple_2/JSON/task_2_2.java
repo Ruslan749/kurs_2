@@ -1,8 +1,14 @@
+/*
+Здесь мы используем библиотеку JSON.simple для работы с файлом JSON. Мы создаем экземпляр класса JSONParser, который используется для чтения файла JSON.
+Затем мы преобразуем объект в JSONObject и получаем ключ корневого элемента. Мы получаем массив книг, проходим по каждой книге и получаем значения полей.
+ */
 package JSON;
-import java.io.FileReader;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+
+import java.io.FileReader;
 public class task_2_2 {
     public static void main(String[] args) {
         try {

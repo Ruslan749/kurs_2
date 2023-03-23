@@ -6,8 +6,6 @@ import org.json.simple.parser.JSONParser;
 
 import java.io.FileReader;
 
-
-
 public class showJson {
 public static void show(){
     try {

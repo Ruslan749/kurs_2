@@ -21,12 +21,10 @@ import static org.json.simple.JSONObject.escape;
 
 public class main {
     public static void main(String[] args) {
-
         try{
-
             // Получаем HTML код страницы
-
             conect();
+
             // Извлекаем список новостей
             Elements newsParent = doc.select("body > table > tbody > tr > td > div > table >" +
                     "tbody > tr:nth-child(5) > td:nth-child(3) > table > tbody > tr > td:nth-child(1)");

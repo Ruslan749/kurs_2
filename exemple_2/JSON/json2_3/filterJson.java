@@ -8,7 +8,6 @@ import java.io.FileReader;
 import java.util.Scanner;
 
 public class filterJson {
-
     public static void filter (){
         try {
             Scanner in = new Scanner(System.in);
