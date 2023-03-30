@@ -10,7 +10,7 @@ public class remuveData {
     public static void main(String[] args) {
         // Добавление элиментов с перемещением головы (наращивание головы)
         Node head = null;
-        for (int i = 0; i <= 9; i++){
+        for (int i = 9; i >= 0; i--){
             head = new Node(i,head);
         }
 
@@ -24,6 +24,11 @@ public class remuveData {
         }
 // полю next предпоследнего элемента присваиваем null
         ref.next=null;
-        System.out.println(ref.value);
+        //Вывод значений на экран
+        Node ref2 = head;
+        while (ref2 != null){
+            System.out.print(" " + ref2.value);
+            ref2 = ref2.next;
+        }
     }
 }

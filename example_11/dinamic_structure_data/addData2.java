@@ -32,7 +32,7 @@ public class addData2 {
 
         //Вывод значений на экран
         Node ref2 = head;
-        while (ref2.next != null){
+        while (ref2 != null){
             System.out.print(" " + ref2.value);
             ref2 = ref2.next;
         }

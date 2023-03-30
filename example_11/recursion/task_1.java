@@ -16,5 +16,6 @@ public class task_1 {
         if((2 * x + 1) < 20){
             m(2*x+1);
         }
+
     }
 }
