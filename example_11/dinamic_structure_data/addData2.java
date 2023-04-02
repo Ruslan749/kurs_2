@@ -14,6 +14,7 @@ public class addData2 {
         for (int i = 0; i <= 9; i++){
             head = new Node(i,head);
         }
+
         // создается новый элемент со значением 44 – для вставки
         Node newNode = new Node(44, null);
         Node ref;
