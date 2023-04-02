@@ -33,5 +33,4 @@ public class remuveData2 {
         ref2 = ref2.next;
     }
     }
-
 }

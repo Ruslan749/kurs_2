@@ -15,15 +15,36 @@ public class dinamicData {
 
     }
 
-    private static void removeFirst(Node head) {
+    private static void Remove(Node head){
 
         Node ref = head;
-        while (ref.next != null) {
+        int k;
+        k = 1;
+        // поиск положения узла, предшествующего удаляемому
+        while (ref.next != null && (k < 5)) {
+            ref = ref.next;
+            k++;
+        }
+        // переброска ссылки для исключения ненужного элемента из списка
+        ref.next = ref.next.next;
+        result(head);
+    }
+    private static void removeFirst(Node head) {
+
+       head = head.next;
+       Remove(head);
+
+    }
+
+    private static void removeLast(Node head) {
+
+        Node ref = head;
+        while (ref.next.next != null) {
             ref = ref.next;
         }
         ref.next = null;
+        removeFirst(head);
 
-        result(head);
     }
 
     private static void inset(Node head) {
@@ -44,7 +65,7 @@ public class dinamicData {
         // переброска ссылок при вставке элемента
         newNode.next = ref.next.next;
         ref.next = newNode;
-        removeFirst(head);
+        removeLast(head);
     }
 
     // Добавление в начало списка
