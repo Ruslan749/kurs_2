@@ -1,18 +1,10 @@
 package individual_work.exemple_8;
-
-
 import individual_work.exemple_8.lineList.Node;
 public class dinamicData {
     public static void main(String[] args) {
-
-
         Node head = null;
-
 //        createHead(head);
         createTail(head);
-
-
-
     }
 
     private static void Remove(Node head){
@@ -88,7 +80,6 @@ public class dinamicData {
 
     // выведение значений в формате текста
     private static void result(Node head) {
-        // Вывод элиментов на экран
         Node ref = head;
         while (ref != null){
             System.out.print(" " + ref.value);
@@ -104,14 +95,15 @@ public class dinamicData {
         addFirst(head);
     }
 
-//    private static void createHead(Node head) {
-//
-//        for (int i = 0; i <= 9; i++){
-//            head = new Node(i,head);
-//        }
-//        result(head);
-//    }
+    private static void createHead(Node head) {
 
+        for (int i = 0; i <= 9; i++){
+            head = new Node(i,head);
+        }
+        addLast(head);
 
+        addFirst(head);
+        result(head);
 
+    }
 }
