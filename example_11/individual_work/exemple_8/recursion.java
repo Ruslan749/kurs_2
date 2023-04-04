@@ -1,7 +1,7 @@
 package individual_work.exemple_8;
 import individual_work.exemple_8.lineList.Node;
-public class recursion {
 
+public class recursion {
     public static void main(String[] args) {
 
         Node head = createTailRec(new Node(5, null), 5);
