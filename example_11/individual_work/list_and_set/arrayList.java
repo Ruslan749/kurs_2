@@ -8,13 +8,15 @@ public class arrayList {
         List<Integer> arrayList = new ArrayList<>();
         int i = 20;
         addElements(arrayList, i);
-        System.out.println("Время выполнения операции добавления arrayList  в начале списка = " + addElementsFerst(arrayList));
+        System.out.println("Время выполнения операции добавления arrayList  в начале списка = " + addElementsFerst(arrayList, i));
         System.out.println("Время выполнения операции добавления arrayList  в середине списка = " + insertList(arrayList, i));
         System.out.println("Время выполнения операции добавления arrayList  в конце списка = " + addElementsLast(arrayList));
 
         System.out.println("Время выполнения операции удаления arrayList  в начале списка = " + removeElementsFerst(arrayList));
         System.out.println("Время выполнения операции удаления arrayList  в середине списка = " + removeInsertList(arrayList, i));
         System.out.println("Время выполнения операции удаления arrayList  в конце списка = " + removeElementsLast(arrayList));
+
+        System.out.println("Время выполнения операции получения элимента arrayList по индексу = " + SearchElements(arrayList, i));
     }
 
     private static void addElements(List<Integer> list, int i) {
@@ -24,7 +26,8 @@ public class arrayList {
         }
 
     }
-    private static long addElementsFerst(List<Integer> list) {
+    private static long addElementsFerst(List<Integer> list, int i) {
+
 
         // точка начала отсчета времени выполнения программы
         long start = System.currentTimeMillis();
@@ -113,6 +116,23 @@ public class arrayList {
 
         // блок кода в котором выполняется операция добавления в серидину колекции
         list.remove(list.size()-1);
+
+        // точка окончания отсчета времени выполнения программы
+        long end = System.currentTimeMillis();
+
+        // вывод в консоль времени выполнения блока кода содержащего операцию
+        return end - start;
+
+    }
+
+    private static long SearchElements (List<Integer> list, int i) {
+
+        // точка начала отсчета времени выполнения программы
+        long start = System.currentTimeMillis();
+
+        // блок кода в котором выполняется операция добавления в серидину колекции
+       System.out.println( list.get(i));
+       System.out.println(list.size());
 
         // точка окончания отсчета времени выполнения программы
         long end = System.currentTimeMillis();
