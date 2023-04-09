@@ -1,4 +1,5 @@
 package individual_work.exemple_8;
+
 import individual_work.exemple_8.lineList.Node;
 
 public class recursion {
@@ -13,7 +14,7 @@ public class recursion {
     private static void toStringRec(Node head) {
         Node ref = head;
         String str = "";
-        while (ref != null){
+        while (ref != null) {
             str += ref.value;
             ref = ref.next;
         }
@@ -22,20 +23,19 @@ public class recursion {
 
     // заполнение с хвоста
     private static Node createTailRec(Node node, int value) {
-        if(value == 0) {
+        if (value == 0) {
             return null;
         }
-        node.next = createTailRec(new Node(value-1, null), value-1);
+        node.next = createTailRec(new Node(value - 1, null), value - 1);
         return node;
     }
+
     // заполнение с головы
     private static Node createHeadRec(Node node, int value) {
-        if(value == 0) {
+        if (value == 0) {
             return null;
         }
-        node.next = createHeadRec(new Node(value-1, node.next), value-1);
+        node.next = createHeadRec(new Node(value - 1, node.next), value - 1);
         return node;
     }
-
-
 }

@@ -8,7 +8,7 @@ public class task_2 {
 
     private static void m(int x) {
 
-        if((2 * x + 1) < 20){
+        if ((2 * x + 1) < 20) {
             m(2 * x + 1);
         }
         System.out.println(x);

@@ -1,5 +1,7 @@
 package individual_work.exemple_8;
+
 import individual_work.exemple_8.lineList.Node;
+
 public class dinamicData {
     public static void main(String[] args) {
         Node head = null;
@@ -7,7 +9,7 @@ public class dinamicData {
         createTail(head);
     }
 
-    private static void Remove(Node head){
+    private static void Remove(Node head) {
 
         Node ref = head;
         int k;
@@ -21,10 +23,11 @@ public class dinamicData {
         ref.next = ref.next.next;
         result(head);
     }
+
     private static void removeFirst(Node head) {
 
-       head = head.next;
-       Remove(head);
+        head = head.next;
+        Remove(head);
 
     }
 
@@ -46,10 +49,10 @@ public class dinamicData {
         Node ref;
 
         ref = head;
-        int k=1;
+        int k = 1;
 
         // поиск нужного положения узла для вставки
-        while (ref.next!= null && (k < 3 )) {
+        while (ref.next != null && (k < 3)) {
             ref = ref.next;
             k++;
         }
@@ -62,7 +65,7 @@ public class dinamicData {
 
     // Добавление в начало списка
     private static void addFirst(Node head) {
-        head = new Node(546,head);
+        head = new Node(546, head);
         inset(head);
     }
 
@@ -74,22 +77,22 @@ public class dinamicData {
         while (ref.next != null) {
             ref = ref.next;
         }
-        ref.next=newtail;
+        ref.next = newtail;
 
     }
 
     // выведение значений в формате текста
     private static void result(Node head) {
         Node ref = head;
-        while (ref != null){
+        while (ref != null) {
             System.out.print(" " + ref.value);
             ref = ref.next;
         }
     }
 
     private static void createTail(Node head) {
-        for (int i = 9; i >= 0; i--){
-            head = new Node(i,head);
+        for (int i = 9; i >= 0; i--) {
+            head = new Node(i, head);
         }
         addLast(head);
         addFirst(head);
@@ -97,8 +100,8 @@ public class dinamicData {
 
     private static void createHead(Node head) {
 
-        for (int i = 0; i <= 9; i++){
-            head = new Node(i,head);
+        for (int i = 0; i <= 9; i++) {
+            head = new Node(i, head);
         }
         addLast(head);
 
