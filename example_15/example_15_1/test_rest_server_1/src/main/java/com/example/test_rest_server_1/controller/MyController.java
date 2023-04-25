@@ -1,9 +1,8 @@
-package com.example.test_rest_server.controller;
+package com.example.test_rest_server_1.controller;
 
-import com.example.test_rest_server.model.Request;
-import com.example.test_rest_server.model.Response;
-import com.example.test_rest_server.service.ModifyRequestService;
-import com.example.test_rest_server.service.MyModifyService;
+import com.example.test_rest_server_1.model.Request;
+import com.example.test_rest_server_1.model.Response;
+import com.example.test_rest_server_1.service.MyModifyService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -17,16 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MyController {
     private final MyModifyService myModifyService;
-    private final ModifyRequestService modifyRequestService;
     @Autowired
-    public MyController(@Qualifier("ModifySystemTime") MyModifyService myModifyService, ModifyRequestService modifyRequestService){
+    public MyController(@Qualifier("ModifyErrorMessage") MyModifyService myModifyService){
         this.myModifyService = myModifyService;
-        this.modifyRequestService = modifyRequestService;
     }
-
     @PostMapping(value = "/feedback")
     public ResponseEntity<Response> feedback(@RequestBody Request request){
-        log.warn("Входящий request: "+String.valueOf(request));
+        log.info("Входящий request : " + String.valueOf(request));
+
         Response response = Response.builder()
                 .uid(request.getUid())
                 .operationUid(request.getOperationUid())
@@ -35,11 +32,10 @@ public class MyController {
                 .errorCode("")
                 .errorMessage("")
                 .build();
-        modifyRequestService.modifyRq(request);
         Response responseAfterModify = myModifyService.modify(response);
-        log.info(("Исходящий response: " + String.valueOf(response)));
+        log.info("Исходящий respons : " + String.valueOf(response));
 
-        return new ResponseEntity<>(responseAfterModify, HttpStatus.OK);
+        return new ResponseEntity<>(response, HttpStatus.OK);
 
     }
 }

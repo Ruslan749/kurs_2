@@ -1,4 +1,4 @@
-package com.example.test_rest_server.model;
+package com.example.test_rest_server_1.model;
 
 import lombok.Builder;
 import lombok.Data;
@@ -10,6 +10,7 @@ import javax.validation.constraints.Size;
 @Data
 @Builder
 public class Request {
+
     @NotBlank
     @Size(max = 32)
     private String uid;
@@ -25,7 +26,7 @@ public class Request {
 
     private String source;
 
-    private Integer communicationId;
+    private Integer CommunicationId;
     private Integer templateId;
 
     @Max(7)
@@ -33,5 +34,4 @@ public class Request {
 
     @Max(5)
     private Integer smsCode;
-
 }
